@@ -8,5 +8,6 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
       - ./db/init.sql:/docker-entrypoint-initdb.d/10-service.sql:ro
+      - ./src/main/resources/master.sql:/opt/erp/master.sql:ro
 volumes:
   pgdata:
